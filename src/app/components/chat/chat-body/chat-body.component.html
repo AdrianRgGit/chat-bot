@@ -1,1 +1,14 @@
-<section class="">chat-body works!</section>
+<section class="chat-body flex flex-col justify-end">
+  <div
+    class="my-4 ml-auto mr-4 inline-flex h-auto max-w-[90%] items-center justify-end gap-x-2 rounded-lg border border-neutral-300 bg-neutral-100 p-4"
+    style="word-break: break-all"
+    *ngFor="let prompt of prompts"
+  >
+    <div>
+      <h3 class="font-bold">Tú:</h3>
+      <p>
+        {{ prompt }}
+      </p>
+    </div>
+  </div>
+</section>

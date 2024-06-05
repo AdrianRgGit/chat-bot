@@ -10,4 +10,10 @@ import { ChatInputComponent } from './chat-input/chat-input.component';
   templateUrl: './chat.component.html',
   styleUrl: './chat.component.css',
 })
-export class ChatComponent {}
+export class ChatComponent {
+  prompts: string[] = [];
+
+  handleSendPrompt(prompt: string) {
+    this.prompts.push(prompt);
+  }
+}

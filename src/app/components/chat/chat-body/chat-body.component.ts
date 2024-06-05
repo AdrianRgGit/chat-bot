@@ -1,12 +1,13 @@
-import { Component } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-chat-body',
   standalone: true,
-  imports: [],
+  imports: [CommonModule],
   templateUrl: './chat-body.component.html',
-  styleUrl: './chat-body.component.css'
+  styleUrl: './chat-body.component.css',
 })
 export class ChatBodyComponent {
-
+  @Input() prompts: string[] = [];
 }
