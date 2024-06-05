@@ -1,0 +1,6 @@
+.avatar-container {
+  background-image: url("/assets/images/bot_avatar.png");
+  background-size: cover;
+  background-position: center;
+  padding: 20px;
+}
