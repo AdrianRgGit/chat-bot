@@ -1,12 +1,11 @@
+import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-bot-response',
   standalone: true,
-  imports: [],
+  imports: [CommonModule],
   templateUrl: './bot-response.component.html',
-  styleUrl: './bot-response.component.css'
+  styleUrl: './bot-response.component.css',
 })
-export class BotResponseComponent {
-
-}
+export class BotResponseComponent {}
