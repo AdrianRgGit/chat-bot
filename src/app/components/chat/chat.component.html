@@ -1,5 +1,8 @@
-<section class="flex h-[100vh] flex-col sm:h-auto">
+<section class="flex h-[100vh] flex-col">
   <app-chat-header></app-chat-header>
   <app-chat-body [prompts]="prompts" class="flex-1"></app-chat-body>
+  <app-chat-buttons
+    (sendButtonPrompt)="handleSendPrompt($event)"
+  ></app-chat-buttons>
   <app-chat-input (sendPrompt)="handleSendPrompt($event)"></app-chat-input>
 </section>
