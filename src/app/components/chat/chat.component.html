@@ -1,8 +1,10 @@
 <section class="flex h-[100vh] flex-col">
-  <app-chat-header></app-chat-header>
+  <app-chat-header (clearChatEvent)="clearChat()"></app-chat-header>
   <app-chat-body [prompts]="prompts" class="flex-1"></app-chat-body>
-  <app-chat-buttons
-    (sendButtonPrompt)="handleSendPrompt($event)"
-  ></app-chat-buttons>
+  <div *ngIf="prompts.length === 0">
+    <app-chat-buttons
+      (sendButtonPrompt)="handleSendPrompt($event)"
+    ></app-chat-buttons>
+  </div>
   <app-chat-input (sendPrompt)="handleSendPrompt($event)"></app-chat-input>
 </section>

@@ -1,4 +1,4 @@
-import { Component, ViewChild } from '@angular/core';
+import { Component, EventEmitter, Output, ViewChild } from '@angular/core';
 import { BurgerComponent } from '../../icons/burger/burger.component';
 import { MinimizeComponent } from '../../icons/minimize/minimize.component';
 import { MatIconModule } from '@angular/material/icon';
@@ -20,8 +20,13 @@ import { MatButtonModule } from '@angular/material/button';
 })
 export class ChatHeaderComponent {
   @ViewChild(MatMenuTrigger) trigger!: MatMenuTrigger;
+  @Output() clearChatEvent = new EventEmitter<void>();
 
-  someMethod() {
+  handleMenuView() {
     this.trigger.openMenu();
+  }
+
+  emitClearChat() {
+    this.clearChatEvent.emit();
   }
 }

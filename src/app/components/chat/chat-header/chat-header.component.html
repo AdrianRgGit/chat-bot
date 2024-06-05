@@ -6,7 +6,7 @@
     </button>
 
     <img
-      src="assets/images/bot_avatar.png"
+      src="assets/images/bot-avatar.png"
       alt="bot avatar"
       class="h-12 w-12 rounded-full bg-white"
     />
@@ -20,15 +20,22 @@
   >
     <app-burger></app-burger>
   </button>
+
   <mat-menu #menu="matMenu">
     <button mat-menu-item>
       <span>Política de privacidad</span>
     </button>
-    <button mat-menu-item disabled>
+
+    <button mat-menu-item>
       <span>Seleccionar idioma</span>
     </button>
+
     <button mat-menu-item>
       <span>Olvidar mis datos</span>
+    </button>
+
+    <button mat-menu-item (click)="emitClearChat()">
+      <span>Vacíar chat</span>
     </button>
   </mat-menu>
 </header>
