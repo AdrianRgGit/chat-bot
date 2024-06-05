@@ -16,7 +16,6 @@ export class ChatInputComponent {
   send() {
     if (this.newPrompt.trim()) {
       this.sendPrompt.emit(this.newPrompt);
-      console.log(this.newPrompt);
       this.newPrompt = '';
     }
   }
