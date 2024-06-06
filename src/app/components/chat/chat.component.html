@@ -1,8 +1,30 @@
 <section
+  [ngClass]="{ hidden: showChat }"
+  class="fixed bottom-4 right-4 rounded-lg bg-white px-2 shadow-md"
+>
+  <div class="flex items-center justify-between">
+    <button
+      (click)="toggleChatView()"
+      type="button"
+      class="flex flex-1 items-center"
+    >
+      <h2 class="text-sm">¿Puedo ayudarte en algo?</h2>
+      <img
+        src="assets/images/bot-avatar.png"
+        alt="bot avatar"
+        class="h-20 w-24 rounded-full bg-white"
+      />
+    </button>
+  </div>
+</section>
+
+<section
+  [ngClass]="{ hidden: !showChat }"
   class="flex h-[100vh] flex-col lg:absolute lg:bottom-0 lg:right-0 lg:z-10 lg:h-[70%] lg:w-[30%] lg:border lg:border-neutral-500"
 >
   <app-chat-header
     (clearChatEvent)="clearChat()"
+    (toggleChatView)="toggleChatView()"
     class="mb-20"
   ></app-chat-header>
 

@@ -21,6 +21,7 @@ import { MatButtonModule } from '@angular/material/button';
 export class ChatHeaderComponent {
   @ViewChild(MatMenuTrigger) trigger!: MatMenuTrigger;
   @Output() clearChatEvent = new EventEmitter<void>();
+  @Output() toggleChatView = new EventEmitter<boolean>();
 
   handleMenuView() {
     this.trigger.openMenu();
@@ -28,5 +29,9 @@ export class ChatHeaderComponent {
 
   emitClearChat() {
     this.clearChatEvent.emit();
+  }
+
+  toggleChat() {
+    this.toggleChatView.emit();
   }
 }
