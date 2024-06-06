@@ -5,29 +5,39 @@
   >
     ¿Qué es un chat bot?
   </button>
+
   <button
+    (click)="sendButtonPrompt('¿Para qué sirve un chat bot?')"
+    class="whitespace-nowrap rounded-xl border border-neutral-300 bg-neutral-100 px-4 py-1 text-xl"
+  >
+    ¿Para qué sirve un chat bot?
+  </button>
+
+  <button
+    (click)="sendButtonPrompt('1millionbot')"
     class="whitespace-nowrap rounded-xl border border-neutral-300 bg-neutral-100 px-4 py-1 text-xl"
   >
     1millionbot
   </button>
+
   <button
-    class="whitespace-nowrap rounded-xl border border-neutral-300 bg-neutral-100 px-4 py-1 text-xl"
-  >
-    Contraseña perdida
-  </button>
-  <button
-    class="whitespace-nowrap rounded-xl border border-neutral-300 bg-neutral-100 px-4 py-1 text-xl"
-  >
-    Error con la api
-  </button>
-  <button
+    (click)="sendButtonPrompt('¿Qué tiempo hace hoy?')"
     class="whitespace-nowrap rounded-xl border border-neutral-300 bg-neutral-100 px-4 py-1 text-xl"
   >
     ¿Qué tiempo hace hoy?
   </button>
+
   <button
+    (click)="sendButtonPrompt('¡Hola!')"
     class="whitespace-nowrap rounded-xl border border-neutral-300 bg-neutral-100 px-4 py-1 text-xl"
   >
-    Sólo quiero hablar
+    ¡Hola!
+  </button>
+
+  <button
+    (click)="sendButtonPrompt('Olvidé la contraseña')"
+    class="whitespace-nowrap rounded-xl border border-neutral-300 bg-neutral-100 px-4 py-1 text-xl"
+  >
+    Olvidé la contraseña
   </button>
 </section>

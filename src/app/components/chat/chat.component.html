@@ -3,7 +3,7 @@
   <app-chat-body [prompts]="prompts" class="flex-1"></app-chat-body>
   <div *ngIf="prompts.length === 0">
     <app-chat-buttons
-      (sendButtonPrompt)="handleSendPrompt($event)"
+      (promptButtonSent)="handleSendPrompt($event)"
     ></app-chat-buttons>
   </div>
   <app-chat-input (sendPrompt)="handleSendPrompt($event)"></app-chat-input>
