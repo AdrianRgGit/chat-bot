@@ -1,9 +1,8 @@
 <header
-  class="fixed flex w-full items-center justify-between bg-red-500 p-4 text-white"
+  class="fixed flex w-full items-center justify-between bg-red-500 p-4 text-white lg:w-[30%]"
 >
   <div class="flex items-center gap-x-4">
-    <!-- Revisa esta estructura de botón -->
-    <button>
+    <button (click)="toggleChat()">
       <app-minimize></app-minimize>
     </button>
 

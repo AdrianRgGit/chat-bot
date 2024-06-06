@@ -29,6 +29,7 @@ interface ChatEntry {
 })
 export class ChatComponent {
   chatEntries: ChatEntry[] = [];
+  showChat: boolean = false;
 
   constructor(private openaiService: OpenaiService) {}
 
@@ -56,5 +57,9 @@ export class ChatComponent {
 
   clearChat() {
     this.chatEntries = [];
+  }
+
+  toggleChatView() {
+    this.showChat = !this.showChat;
   }
 }
