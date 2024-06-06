@@ -1,4 +1,20 @@
-<section class="m-2 flex h-12 gap-x-4 overflow-x-auto">
+<section class="section-container m-2 flex h-12 gap-x-4 overflow-x-hidden">
+  <div class="hidden lg:block">
+    <button
+      (click)="scrollRight()"
+      class="scroll-button absolute right-2 top-[55%] -translate-y-1/2 transform rounded-full border border-neutral-500 bg-neutral-300 p-2 text-black opacity-0 transition duration-300"
+    >
+      <app-chevron-right></app-chevron-right>
+    </button>
+
+    <button
+      (click)="scrollLeft()"
+      class="scroll-button absolute left-2 top-[55%] -translate-y-1/2 transform rounded-full border border-neutral-500 bg-neutral-300 p-2 text-black opacity-0 transition duration-300"
+    >
+      <app-chevron-left></app-chevron-left>
+    </button>
+  </div>
+
   <button
     (click)="sendButtonPrompt('¿Qué es un chat bot?')"
     class="whitespace-nowrap rounded-xl border border-neutral-300 bg-neutral-100 px-4 py-1 text-xl"
