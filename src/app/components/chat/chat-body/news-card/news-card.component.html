@@ -1,0 +1,53 @@
+<section
+  *ngIf="slides && slides.length > 0"
+  class="relative m-4 my-4 mr-auto inline-flex h-auto max-w-[90%] animate-slideIn flex-col gap-x-2 rounded-b-3xl rounded-tr-3xl border border-neutral-300 bg-neutral-100 p-4"
+>
+  <header>
+    <h3 class="font-bold">Bill:</h3>
+    <h4 class="mb-2 text-lg font-semibold">{{ slides[currentIndex].title }}</h4>
+  </header>
+
+  <picture>
+    <img
+      [src]="slides[currentIndex].image"
+      alt="Una imágen de la noticia {{ currentIndex + 1 }}"
+      class="h-64 w-full"
+    />
+  </picture>
+
+  <button type="button" (click)="prevSlide()">
+    <app-chevron-left
+      class="absolute left-6 top-[40%] rounded-full bg-white/50 p-2 hover:bg-neutral-200/80"
+    ></app-chevron-left>
+  </button>
+
+  <button type="button" (click)="nextSlide()">
+    <app-chevron-right
+      class="absolute right-6 top-[40%] rounded-full bg-white/50 p-2 hover:bg-neutral-200/80"
+    ></app-chevron-right>
+  </button>
+
+  <div
+    class="absolute top-[65%] flex w-full max-w-[90%] items-center justify-center gap-x-4 lg:top-[65%]"
+  >
+    <button
+      type="button"
+      *ngFor="let slide of slides; let i = index"
+      (click)="changeSlide(i)"
+      [class]="{
+        'rounded-full bg-white/50 p-2 hover:bg-neutral-200/80':
+          currentIndex !== i,
+        'rounded-full bg-neutral-200 p-2': currentIndex === i,
+      }"
+    >
+      <app-dot></app-dot>
+    </button>
+  </div>
+
+  <div class="mt-4 flex flex-col gap-y-2">
+    <p class="line-clamp-3 text-justify">
+      {{ slides[currentIndex].description }}
+    </p>
+    <a href="#" class="self-end text-sm font-semibold">Seguir leyendo</a>
+  </div>
+</section>

@@ -1,0 +1,42 @@
+<header
+  class="fixed z-10 flex w-full items-center justify-between bg-red-500 p-4 text-white lg:w-[30%]"
+>
+  <div class="flex items-center gap-x-4">
+    <button (click)="toggleChat()">
+      <app-minimize></app-minimize>
+    </button>
+
+    <img
+      src="assets/images/bot-avatar.png"
+      alt="bot avatar"
+      class="h-12 w-12 rounded-full bg-white"
+    />
+    <p class="text-xl font-bold">Bill</p>
+  </div>
+
+  <button
+    mat-icon-button
+    [matMenuTriggerFor]="menu"
+    aria-label="Example icon-button with a menu"
+  >
+    <app-burger></app-burger>
+  </button>
+
+  <mat-menu #menu="matMenu">
+    <button mat-menu-item disabled>
+      <span>Política de privacidad</span>
+    </button>
+
+    <button mat-menu-item disabled>
+      <span>Seleccionar idioma</span>
+    </button>
+
+    <button mat-menu-item disabled>
+      <span>Olvidar mis datos</span>
+    </button>
+
+    <button mat-menu-item (click)="emitClearChat()">
+      <span>Vaciar chat</span>
+    </button>
+  </mat-menu>
+</header>

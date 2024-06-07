@@ -1,0 +1,61 @@
+<section
+  class="section-container m-2 flex h-12 gap-x-4 overflow-x-auto lg:overflow-x-hidden"
+>
+  <div class="hidden lg:block">
+    <button
+      (click)="scrollRight()"
+      class="scroll-button absolute right-2 top-[55%] -translate-y-1/2 transform rounded-full border border-neutral-500 bg-neutral-300 p-2 text-black opacity-0 transition duration-300"
+    >
+      <app-chevron-right></app-chevron-right>
+    </button>
+
+    <button
+      (click)="scrollLeft()"
+      class="scroll-button absolute left-2 top-[55%] -translate-y-1/2 transform rounded-full border border-neutral-500 bg-neutral-300 p-2 text-black opacity-0 transition duration-300"
+    >
+      <app-chevron-left></app-chevron-left>
+    </button>
+  </div>
+
+  <button
+    (click)="sendButtonPrompt('¿Qué es un chat bot?')"
+    class="whitespace-nowrap rounded-xl border border-neutral-300 bg-neutral-100 px-4 py-1 text-xl"
+  >
+    ¿Qué es un chat bot?
+  </button>
+
+  <button
+    (click)="sendButtonPrompt('Últimas noticias')"
+    class="whitespace-nowrap rounded-xl border border-neutral-300 bg-neutral-100 px-4 py-1 text-xl"
+  >
+    Últimas noticias
+  </button>
+
+  <button
+    (click)="sendButtonPrompt('1millionbot')"
+    class="whitespace-nowrap rounded-xl border border-neutral-300 bg-neutral-100 px-4 py-1 text-xl"
+  >
+    1millionbot
+  </button>
+
+  <button
+    (click)="sendButtonPrompt('¿Qué tiempo hace hoy?')"
+    class="whitespace-nowrap rounded-xl border border-neutral-300 bg-neutral-100 px-4 py-1 text-xl"
+  >
+    ¿Qué tiempo hace hoy?
+  </button>
+
+  <button
+    (click)="sendButtonPrompt('¡Hola!')"
+    class="whitespace-nowrap rounded-xl border border-neutral-300 bg-neutral-100 px-4 py-1 text-xl"
+  >
+    ¡Hola!
+  </button>
+
+  <button
+    (click)="sendButtonPrompt('Olvidé la contraseña')"
+    class="whitespace-nowrap rounded-xl border border-neutral-300 bg-neutral-100 px-4 py-1 text-xl"
+  >
+    Olvidé la contraseña
+  </button>
+</section>
