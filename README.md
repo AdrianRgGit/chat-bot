@@ -65,12 +65,15 @@ En cuanto a los requisitos, se ha cumplido con la mayoría de ellos. El diseño 
 ## Observaciones y futuras mejoras
 
 - **Un cargando respuesta en el chat:**
+
 Debido al tiempo en que la aplicación se comunica con la api y esta devuelve una respuesta, transcurre un tiempo. En este periodo de tiempo, es necesario añadir un componente el cual se muestre al usuario como por ejemplo un "Respondiend..." o un simple spinner para mejorar la experiencia de usuario. 
 
 Esto no lo he implementado en mi aplicación debido a la falta de tiempo y que no lo veo muy necesario ya que el bot no va a mandar nada a la api ya que no dispone de un token. Pero en un futuro y cuando la aplicación esté más testeada se lo añadiré ya que es un gran plus.
 
 - **Diseño**
+
 Aunque el diseño no está mal (es simple pero eficaz) me gustaría en un futuro darle otra vuelta ya que sé que se podría mejorar mucho tanto la ui como la ux.
 
 - **Optimización y mejoras**
+
 La aplicación aunque sea simple y funcione perfectamente, siempre se puede mejorar (limpiar código, optimizar cargas, implementar mejoras...)
