@@ -6,11 +6,7 @@ import { ChatButtonsComponent } from './chat-buttons/chat-buttons.component';
 import { CommonModule } from '@angular/common';
 import { HttpClientModule, provideHttpClient } from '@angular/common/http';
 import { ChatBotService } from '../../services/chatBot/chat-bot.service';
-
-interface ChatEntry {
-  prompt: string;
-  response: string;
-}
+import { ChatEntry } from '../../types/types';
 
 @Component({
   selector: 'app-chat',
