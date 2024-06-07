@@ -14,6 +14,13 @@ interface ChatEntry {
   templateUrl: './chat-body.component.html',
   styleUrls: ['./chat-body.component.css'],
 })
-export class ChatBodyComponent {
+export class ChatBodyComponent implements OnChanges {
   @Input() chatEntries: ChatEntry[] = [];
+  @Input() slides: any[] = [];
+
+  ngOnChanges(changes: SimpleChanges) {
+    if (changes['slides']) {
+      console.log('Slides received:', this.slides);
+    }
+  }
 }

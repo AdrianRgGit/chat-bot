@@ -12,6 +12,8 @@ import { NewsService } from '../../../services/newsService/news-service.service'
 })
 export class ChatButtonsComponent {
   @Output() promptButtonSent = new EventEmitter<string>();
+  @Output() slides = new EventEmitter<any>();
+
   constructor(private newsService: NewsService) {}
 
   sendButtonPrompt(prompt: string) {
@@ -34,6 +36,7 @@ export class ChatButtonsComponent {
           description: `En la era digital en constante evolución...`,
         },
       ];
+      this.slides.emit(this.newsService.slides);
     } else {
       this.promptButtonSent.emit(prompt);
     }

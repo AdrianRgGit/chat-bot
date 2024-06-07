@@ -1,4 +1,3 @@
-// src/app/components/chat/chat.component.ts
 import { Component } from '@angular/core';
 import { ChatHeaderComponent } from './chat-header/chat-header.component';
 import { ChatBodyComponent } from './chat-body/chat-body.component';
@@ -30,6 +29,7 @@ interface ChatEntry {
 export class ChatComponent {
   chatEntries: ChatEntry[] = [];
   showChat: boolean = false;
+  slides: any[] = [];
 
   constructor(private openaiService: OpenaiService) {}
 
@@ -57,9 +57,14 @@ export class ChatComponent {
 
   clearChat() {
     this.chatEntries = [];
+    this.slides = [];
   }
 
   toggleChatView() {
     this.showChat = !this.showChat;
+  }
+
+  receiveSlides(slides: any[]) {
+    this.slides = slides;
   }
 }
