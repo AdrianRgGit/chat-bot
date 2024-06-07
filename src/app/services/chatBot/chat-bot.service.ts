@@ -10,7 +10,7 @@ import { environment } from '../../../environments/environment';
 @Injectable({
   providedIn: HttpClientModule,
 })
-export class OpenaiService {
+export class ChatBotService {
   private apiUrl = 'https://api.openai.com/v1/engines/';
   private apiKey = environment.apiKey;
 

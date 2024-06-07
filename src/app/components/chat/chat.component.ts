@@ -5,7 +5,7 @@ import { ChatInputComponent } from './chat-input/chat-input.component';
 import { ChatButtonsComponent } from './chat-buttons/chat-buttons.component';
 import { CommonModule } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';
-import { OpenaiService } from '../../services/chatBot/chat-bot.service';
+import { ChatBotService } from '../../services/chatBot/chat-bot.service';
 
 interface ChatEntry {
   prompt: string;
@@ -28,10 +28,10 @@ interface ChatEntry {
 })
 export class ChatComponent {
   chatEntries: ChatEntry[] = [];
-  showChat: boolean = false;
   slides: any[] = [];
+  showChat: boolean = false;
 
-  constructor(private openaiService: OpenaiService) {}
+  constructor(private openaiService: ChatBotService) {}
 
   getBotResponse(userPrompt: string) {
     const modelName = 'gpt-3.5-turbo';

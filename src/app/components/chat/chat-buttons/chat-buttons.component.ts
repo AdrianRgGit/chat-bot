@@ -18,7 +18,6 @@ export class ChatButtonsComponent {
 
   sendButtonPrompt(prompt: string) {
     if (prompt === 'Últimas noticias') {
-      this.promptButtonSent.emit(prompt);
       this.newsService.slides = [
         {
           image: '/assets/images/new-1.jpg',

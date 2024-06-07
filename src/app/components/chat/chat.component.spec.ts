@@ -2,26 +2,26 @@ import { TestBed, ComponentFixture, waitForAsync } from '@angular/core/testing';
 import { HttpClientModule } from '@angular/common/http';
 import { of, throwError } from 'rxjs';
 import { ChatComponent } from './chat.component';
-import { OpenaiService } from '../../services/chatBot/chat-bot.service';
+import { ChatBotService } from '../../services/chatBot/chat-bot.service';
 
 
 describe('ChatComponent', () => {
   let component: ChatComponent;
   let fixture: ComponentFixture<ChatComponent>;
-  let openaiService: OpenaiService; // Declaración del servicio
+  let openaiService: ChatBotService; // Declaración del servicio
 
   beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
       declarations: [ChatComponent],
       imports: [HttpClientModule],
-      providers: [OpenaiService],
+      providers: [ChatBotService],
     }).compileComponents();
   }));
 
   beforeEach(() => {
     fixture = TestBed.createComponent(ChatComponent);
     component = fixture.componentInstance;
-    openaiService = TestBed.inject(OpenaiService); // Obtener la instancia del servicio
+    openaiService = TestBed.inject(ChatBotService); // Obtener la instancia del servicio
     fixture.detectChanges();
   });
 

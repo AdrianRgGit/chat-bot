@@ -34,7 +34,7 @@
     class="flex-1 lg:max-h-[70%]"
   ></app-chat-body>
 
-  <div *ngIf="chatEntries.length === 0">
+  <div *ngIf="chatEntries.length === 0 && slides.length === 0">
     <app-chat-buttons
       (promptButtonSent)="handleSendPrompt($event)"
       (slides)="receiveSlides($event)"
