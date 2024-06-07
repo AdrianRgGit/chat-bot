@@ -23,7 +23,6 @@
     "@angular/platform-server": "^17.2.0",
     "@angular/router": "^17.2.0",
     "@angular/ssr": "^17.2.3",
-    "@coreui/angular": "^5.1.2",
     "express": "^4.18.2",
     "openai": "^4.48.2",
     "rxjs": "~7.8.0",

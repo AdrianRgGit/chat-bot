@@ -3,24 +3,24 @@
 >
   <header>
     <h3 class="font-bold">Bill:</h3>
-    <h4 class="mb-2 text-lg font-semibold">Noticia 1</h4>
+    <h4 class="mb-2 text-lg font-semibold">{{ slides[currentIndex].title }}</h4>
   </header>
 
   <picture>
     <img
-      src="/assets/images/new-1.jpg"
-      alt="Una imágen de la noticia 1"
+      [src]="slides[currentIndex].image"
+      alt="Una imágen de la noticia {{ currentIndex + 1 }}"
       class="h-64 w-full"
     />
   </picture>
 
-  <button type="button">
+  <button type="button" (click)="prevSlide()">
     <app-chevron-left
       class="absolute left-6 top-[40%] rounded-full bg-white/50 p-2 hover:bg-neutral-200/80"
     ></app-chevron-left>
   </button>
 
-  <button type="button">
+  <button type="button" (click)="nextSlide()">
     <app-chevron-right
       class="absolute right-6 top-[40%] rounded-full bg-white/50 p-2 hover:bg-neutral-200/80"
     ></app-chevron-right>
@@ -31,21 +31,13 @@
   >
     <button
       type="button"
-      class="rounded-full bg-white/50 p-2 hover:bg-neutral-200/80"
-    >
-      <app-dot></app-dot>
-    </button>
-
-    <button
-      type="button"
-      class="rounded-full bg-white/50 p-2 hover:bg-neutral-200/80"
-    >
-      <app-dot></app-dot>
-    </button>
-
-    <button
-      type="button"
-      class="rounded-full bg-white/50 p-2 hover:bg-neutral-200/80"
+      *ngFor="let slide of slides; let i = index"
+      (click)="changeSlide(i)"
+      [class]="{
+        'rounded-full bg-white/50 p-2 hover:bg-neutral-200/80':
+          currentIndex !== i,
+        'rounded-full bg-neutral-200 p-2': currentIndex === i,
+      }"
     >
       <app-dot></app-dot>
     </button>
@@ -53,12 +45,10 @@
 
   <div class="mt-4 flex flex-col gap-y-2">
     <p class="line-clamp-3 text-justify">
-      Lorem ipsum, dolor sit amet consectetur adipisicing elit. Distinctio
-      doloribus unde a labore illum. Recusandae iste ipsam, assumenda quia,
-      nesciunt illo nihil quasi dignissimos doloremque, ea iusto corrupti id
-      quod?
+      {{ slides[currentIndex].description }}
     </p>
 
     <a href="#" class="self-end text-sm font-semibold">Seguir leyendo</a>
   </div>
 </section>
+
