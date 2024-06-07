@@ -4,7 +4,7 @@ import { ChatBodyComponent } from './chat-body/chat-body.component';
 import { ChatInputComponent } from './chat-input/chat-input.component';
 import { ChatButtonsComponent } from './chat-buttons/chat-buttons.component';
 import { CommonModule } from '@angular/common';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, provideHttpClient } from '@angular/common/http';
 import { ChatBotService } from '../../services/chatBot/chat-bot.service';
 
 interface ChatEntry {

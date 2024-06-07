@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component, Input } from '@angular/core';
+import { Component, ElementRef, Input, ViewChild } from '@angular/core';
 import { NewsCardComponent } from './news-card/news-card.component';
 
 interface ChatEntry {
@@ -17,4 +17,16 @@ interface ChatEntry {
 export class ChatBodyComponent {
   @Input() chatEntries: ChatEntry[] = [];
   @Input() slides: any[] = [];
+  @ViewChild('scrollContainer') private scrollContainer!: ElementRef;
+
+  ngAfterViewChecked() {
+    this.scrollToBottom();
+  }
+
+  private scrollToBottom(): void {
+    if (this.scrollContainer) {
+      this.scrollContainer.nativeElement.scrollTop =
+        this.scrollContainer.nativeElement.scrollHeight;
+    }
+  }
 }

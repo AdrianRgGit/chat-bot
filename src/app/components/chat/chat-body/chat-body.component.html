@@ -1,4 +1,4 @@
-<section class="flex h-full flex-col overflow-x-hidden">
+<section class="flex h-full flex-col overflow-x-hidden" #scrollContainer>
   <app-news-card [slides]="slides"></app-news-card>
 
   <div
@@ -10,9 +10,7 @@
       style="word-break: break-all"
     >
       <h3 class="font-bold">Tú:</h3>
-      <p>
-        {{ entry.prompt }}
-      </p>
+      <p>{{ entry.prompt }}</p>
     </div>
 
     <div
@@ -20,9 +18,7 @@
       style="word-break: break-all"
     >
       <h3 class="font-bold">Bill:</h3>
-      <p>
-        {{ entry.response }}
-      </p>
+      <p>{{ entry.response }}</p>
     </div>
   </div>
 </section>
