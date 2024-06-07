@@ -33,12 +33,12 @@
     class="flex-1 lg:max-h-[70%]"
   ></app-chat-body>
 
-  <!-- <div *ngIf="chatEntries.length === 0">
+  <div *ngIf="chatEntries.length === 0">
     <app-chat-buttons
       (promptButtonSent)="handleSendPrompt($event)"
       class="relative"
     ></app-chat-buttons>
-  </div> -->
+  </div>
 
   <app-chat-input (sendPrompt)="handleSendPrompt($event)"></app-chat-input>
 </section>

@@ -3,7 +3,8 @@ import { Injectable } from '@angular/core';
 @Injectable({
   providedIn: 'root'
 })
-export class NewServiceService {
+export class NewsService {
+  slides: any[] = [];
 
   constructor() { }
 }
