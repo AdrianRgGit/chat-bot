@@ -1,6 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { Component, Input, OnChanges, SimpleChanges } from '@angular/core';
-import { BotResponseComponent } from './bot-response/bot-response.component';
+import { NewsCardComponent } from './news-card/news-card.component';
 
 interface ChatEntry {
   prompt: string;
@@ -10,7 +10,7 @@ interface ChatEntry {
 @Component({
   selector: 'app-chat-body',
   standalone: true,
-  imports: [CommonModule, BotResponseComponent],
+  imports: [CommonModule, NewsCardComponent],
   templateUrl: './chat-body.component.html',
   styleUrls: ['./chat-body.component.css'],
 })

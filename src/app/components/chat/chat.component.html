@@ -20,7 +20,7 @@
 
 <section
   [ngClass]="{ hidden: !showChat }"
-  class="absolute top-0 flex h-[100vh] w-full flex-col bg-white lg:absolute lg:bottom-0 lg:right-0 lg:top-auto lg:z-10 lg:h-[70%] lg:w-[30%] lg:border lg:border-neutral-500"
+  class="fixed top-0 flex h-[100vh] w-full flex-col bg-white lg:fixed lg:bottom-0 lg:right-0 lg:top-auto lg:z-10 lg:h-[70%] lg:w-[30%] lg:border lg:border-neutral-500"
 >
   <app-chat-header
     (clearChatEvent)="clearChat()"
@@ -33,12 +33,12 @@
     class="flex-1 lg:max-h-[70%]"
   ></app-chat-body>
 
-  <div *ngIf="chatEntries.length === 0">
+  <!-- <div *ngIf="chatEntries.length === 0">
     <app-chat-buttons
       (promptButtonSent)="handleSendPrompt($event)"
       class="relative"
     ></app-chat-buttons>
-  </div>
+  </div> -->
 
   <app-chat-input (sendPrompt)="handleSendPrompt($event)"></app-chat-input>
 </section>
