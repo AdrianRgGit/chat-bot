@@ -20,7 +20,7 @@
 
 <section
   [ngClass]="{ hidden: !showChat }"
-  class="fixed top-0 flex h-[100vh] w-full flex-col bg-white lg:fixed lg:bottom-0 lg:right-0 lg:top-auto lg:z-10 lg:h-[70%] lg:w-[30%] lg:border lg:border-neutral-500"
+  class="absolute top-0 flex h-[100vh] w-full flex-col bg-white lg:fixed lg:bottom-0 lg:right-0 lg:top-auto lg:z-10 lg:h-[70%] lg:w-[30%] lg:border lg:border-neutral-500"
 >
   <app-chat-header
     (clearChatEvent)="clearChat()"
