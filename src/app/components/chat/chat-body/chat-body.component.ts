@@ -1,11 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { Component, ElementRef, Input, ViewChild } from '@angular/core';
 import { NewsCardComponent } from './news-card/news-card.component';
-
-interface ChatEntry {
-  prompt: string;
-  response: string;
-}
+import { ChatEntry } from '../../../types/types';
 
 @Component({
   selector: 'app-chat-body',
