@@ -6,7 +6,7 @@ import { ChatInputComponent } from './chat-input/chat-input.component';
 import { ChatButtonsComponent } from './chat-buttons/chat-buttons.component';
 import { CommonModule } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';
-import { OpenaiService } from '../../services/chat-bot.service';
+import { OpenaiService } from '../../services/chatBot/chat-bot.service';
 
 interface ChatEntry {
   prompt: string;

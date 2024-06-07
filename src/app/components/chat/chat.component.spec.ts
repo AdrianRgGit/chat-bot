@@ -2,7 +2,8 @@ import { TestBed, ComponentFixture, waitForAsync } from '@angular/core/testing';
 import { HttpClientModule } from '@angular/common/http';
 import { of, throwError } from 'rxjs';
 import { ChatComponent } from './chat.component';
-import { OpenaiService } from '../../services/chat-bot.service';
+import { OpenaiService } from '../../services/chatBot/chat-bot.service';
+
 
 describe('ChatComponent', () => {
   let component: ChatComponent;
