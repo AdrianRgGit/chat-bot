@@ -70,6 +70,7 @@ Debido al tiempo en que la aplicación se comunica con la api y esta devuelve un
 Esto no lo he implementado en mi aplicación debido a la falta de tiempo y que no lo veo muy necesario ya que el bot no va a mandar nada a la api ya que no dispone de un token. Pero en un futuro y cuando la aplicación esté más testeada se lo añadiré ya que es un gran plus.
 
 - **Diseño**
-Aunque el diseño no está mal del todo (es simple pero eficaz) me gustaría en un futuro darle otra vuelta ya que sé que se podría mejorar mucho tanto la ui como la ux.
+Aunque el diseño no está mal (es simple pero eficaz) me gustaría en un futuro darle otra vuelta ya que sé que se podría mejorar mucho tanto la ui como la ux.
 
-
+- **Optimización y mejoras**
+La aplicación aunque sea simple y funcione perfectamente, siempre se puede mejorar (limpiar código, optimizar cargas, implementar mejoras...)
