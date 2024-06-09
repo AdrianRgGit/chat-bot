@@ -36,9 +36,9 @@
 
 ### Requisitos adicionales
 
-- Dockerizar la aplicación.
-- Mostrar un llamado a la acción antes del chatbot.
-- Escribir pruebas unitarias/end-to-end realistas.
+- Dockerizar la aplicación. ✅
+- Mostrar un llamado a la acción antes del chatbot. ✅
+- Escribir pruebas unitarias/end-to-end realistas. ✅
 
 ## Descripción del proyecto
 
@@ -66,7 +66,7 @@ En cuanto a los requisitos, se ha cumplido con la mayoría de ellos. El diseño 
 
 - **Un cargando respuesta en el chat:**
 
-Debido al tiempo en que la aplicación se comunica con la api y esta devuelve una respuesta, transcurre un tiempo. En este periodo de tiempo, es necesario añadir un componente el cual se muestre al usuario como por ejemplo un "Respondiend..." o un simple spinner para mejorar la experiencia de usuario. 
+Debido al tiempo en que la aplicación se comunica con la api y esta devuelve una respuesta, transcurre un tiempo. En este periodo de tiempo, es necesario añadir un componente el cual se muestre al usuario como por ejemplo un "Respondiend..." o un simple spinner para mejorar la experiencia de usuario.
 
 Esto no lo he implementado en mi aplicación debido a la falta de tiempo y que no lo veo muy necesario ya que el bot no va a mandar nada a la api ya que no dispone de un token. Pero en un futuro y cuando la aplicación esté más testeada se lo añadiré ya que es un gran plus.
 
@@ -77,3 +77,25 @@ Aunque el diseño no está mal (es simple pero eficaz) me gustaría en un futuro
 - **Optimización y mejoras**
 
 La aplicación aunque sea simple y funcione perfectamente, siempre se puede mejorar (limpiar código, optimizar cargas, implementar mejoras...)
+
+## Docker
+
+Este proyecto esta configurado para poder crear una imágen y que funcione con cualquier versión. Para su uso, utilizar en la misma aplicación los siguiente comandos:
+
+Para crear la imágen:
+
+```
+docker build -t nombre-de-la-imagen .
+```
+
+Para ejecutar el contenedor:
+
+```
+docker run -d -p 4200:4200 nombre-de-la-imagen
+```
+
+En tu navegador ir a:
+
+```
+http://localhost:4200/
+```
