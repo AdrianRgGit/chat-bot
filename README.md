@@ -72,7 +72,7 @@ Esto no lo he implementado en mi aplicación debido a la falta de tiempo y que n
 
 - **Diseño**
 
-Aunque el diseño no está mal (es simple pero eficaz) me gustaría en un futuro darle otra vuelta ya que sé que se podría mejorar mucho tanto la ui como la ux.
+Aunque el diseño no está mal (es simple pero eficaz) me gustaría en un futuro darle otra vuelta ya que sé que se podría mejorar mucho tanto la ui como la ux. También me gustaría poder hacer que el tamaño del chat sea variable, es decir, que el propio usuario pueda ajustarlo a su gusto. Esto ya lo he estado mirando y se que existen librerías para realizarlo, pero por falta de tiempo lo dejo para un futuro.
 
 - **Optimización y mejoras**
 
