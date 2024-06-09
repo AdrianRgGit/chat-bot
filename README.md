@@ -78,6 +78,40 @@ Aunque el diseño no está mal (es simple pero eficaz) me gustaría en un futuro
 
 La aplicación aunque sea simple y funcione perfectamente, siempre se puede mejorar (limpiar código, optimizar cargas, implementar mejoras...)
 
+## Clonar aplicación
+
+Para el uso de esta aplicación debrás clonar el repositorio donde más te guste:
+
+Clonar repo (también puedes descargarlo en zip y saltarte este paso):
+
+```
+git clone https://github.com/AdrianRgGit/chat-bot.git
+```
+
+Acceder a la carpeta del proyecto
+
+```
+cd chat-bot
+```
+
+Instalar dependencias:
+
+```
+npm i
+```
+
+Inicializar el servidor:
+
+```
+ng serve
+```
+
+En el navegador acceder a la aplicación:
+
+```
+http://localhost:4200/
+```
+
 ## Docker
 
 Este proyecto esta configurado para poder crear una imágen y que funcione con cualquier versión. Para su uso, utilizar en la misma aplicación los siguiente comandos:
