@@ -18,9 +18,9 @@ import { CommonModule } from '@angular/common';
 })
 export class NewsCardComponent {
   @Input() slides: any[] = [];
-
   currentIndex = 0;
 
+  // NOTE: Funciones para hacer funcionar el carousel
   changeSlide(index: number) {
     this.currentIndex = index;
   }

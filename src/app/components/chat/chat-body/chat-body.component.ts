@@ -15,10 +15,12 @@ export class ChatBodyComponent {
   @Input() slides: any[] = [];
   @ViewChild('scrollContainer') private scrollContainer!: ElementRef;
 
+  // NOTE: Se ejecuta la función
   ngAfterViewChecked() {
     this.scrollToBottom();
   }
 
+  // NOTE: Función privada para scrollear automáticamente hacia abajo del todo cada vez que se escriba.
   private scrollToBottom(): void {
     if (this.scrollContainer) {
       this.scrollContainer.nativeElement.scrollTop =
