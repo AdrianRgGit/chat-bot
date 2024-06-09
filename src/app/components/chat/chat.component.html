@@ -31,10 +31,10 @@
   <app-chat-body
     [chatEntries]="chatEntries"
     [slides]="slides"
-    class="flex-1 lg:max-h-[80%]"
+    class="flex-1 lg:max-h-[75%] xl:max-h-[80%]"
   ></app-chat-body>
 
-  <div *ngIf="chatEntries.length === 0 && slides.length === 0" class="lg:mb-16">
+  <div *ngIf="chatEntries.length === 0 && slides.length === 0">
     <app-chat-buttons
       (promptButtonSent)="handleSendPrompt($event)"
       (slides)="receiveSlides($event)"
@@ -44,6 +44,6 @@
 
   <app-chat-input
     (sendPrompt)="handleSendPrompt($event)"
-    class="lg:fixed lg:bottom-0 lg:w-[30%]"
+    class="lg:mt-14"
   ></app-chat-input>
 </aside>
