@@ -1,4 +1,4 @@
-<section
+<aside
   [ngClass]="{ hidden: showChat }"
   class="fixed bottom-4 right-4 rounded-lg bg-white px-2 pl-4 shadow-md"
 >
@@ -16,25 +16,25 @@
       />
     </button>
   </div>
-</section>
+</aside>
 
-<section
+<aside
   [ngClass]="{ hidden: !showChat }"
-  class="absolute top-0 flex h-[100vh] w-full flex-col bg-white lg:fixed lg:bottom-0 lg:right-0 lg:top-auto lg:z-10 lg:h-[70%] lg:w-[30%] lg:border lg:border-neutral-500"
+  class="absolute top-0 flex h-[100vh] w-full flex-col bg-white lg:fixed lg:bottom-0 lg:right-0 lg:top-auto lg:z-10 lg:h-[85%] lg:w-[30%] lg:border lg:border-neutral-500"
 >
   <app-chat-header
     (clearChatEvent)="clearChat()"
     (toggleChatView)="toggleChatView()"
-    class="mb-20"
+    class="mb-24"
   ></app-chat-header>
 
   <app-chat-body
     [chatEntries]="chatEntries"
     [slides]="slides"
-    class="flex-1 lg:max-h-[70%]"
+    class="flex-1 lg:max-h-[80%]"
   ></app-chat-body>
 
-  <div *ngIf="chatEntries.length === 0 && slides.length === 0">
+  <div *ngIf="chatEntries.length === 0 && slides.length === 0" class="lg:mb-16">
     <app-chat-buttons
       (promptButtonSent)="handleSendPrompt($event)"
       (slides)="receiveSlides($event)"
@@ -42,5 +42,8 @@
     ></app-chat-buttons>
   </div>
 
-  <app-chat-input (sendPrompt)="handleSendPrompt($event)"></app-chat-input>
-</section>
+  <app-chat-input
+    (sendPrompt)="handleSendPrompt($event)"
+    class="lg:fixed lg:bottom-0 lg:w-[30%]"
+  ></app-chat-input>
+</aside>
