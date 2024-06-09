@@ -91,11 +91,36 @@ docker build -t nombre-de-la-imagen .
 Para ejecutar el contenedor:
 
 ```
-docker run -d -p 4200:4200 nombre-de-la-imagen
+docker run -d -p 4200:4200 --name nombre-del-contenedor nombre-de-la-imagen
 ```
 
 En tu navegador ir a:
 
 ```
 http://localhost:4200/
+```
+
+Una vez testeada la aplicación puedes detener la ejecución del contenedor y borrarlo con:
+
+```
+docker stop nombre-del-contenedor && docker rm nombre-del-contenedor
+```
+
+También puedes borrar la imágen con:
+
+```
+docker rmi nombre-de-la-imagen
+```
+
+Comandos extra:
+Para ver los contenedores en ejecución
+
+```
+docker ps -a
+```
+
+Para ver las imágenes disponibles:
+
+```
+docker images
 ```
