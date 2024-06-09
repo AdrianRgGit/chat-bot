@@ -16,6 +16,8 @@ export class ChatButtonsComponent {
 
   constructor(private newsService: NewsService) {}
 
+  // NTOE: Mandamos al componente padre el texto del botón que hemos seleccionado y realizamos la consulta.
+  // NOTE: En el caso de últimas noticias, creamos un mock para hacer un ejemplo de como quedaría el chat cuando el bot nos de noticias o imágenes.
   sendButtonPrompt(prompt: string) {
     if (prompt === 'Últimas noticias') {
       this.newsService.slides = [
@@ -41,6 +43,7 @@ export class ChatButtonsComponent {
     }
   }
 
+  // NOTE: Botones para movernos en modo escritorio entre los botones
   scrollRight() {
     const container = document.querySelector('.section-container');
     if (container) {

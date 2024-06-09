@@ -23,14 +23,17 @@ export class ChatHeaderComponent {
   @Output() clearChatEvent = new EventEmitter<void>();
   @Output() toggleChatView = new EventEmitter<boolean>();
 
+  // NOTE: Alternar la vista del menú del chat
   handleMenuView() {
     this.trigger.openMenu();
   }
 
+  // NOTE: Ejecutar la función de limpiar chat del padre
   emitClearChat() {
     this.clearChatEvent.emit();
   }
 
+  // NOTE: Ejecutar la función de alternar vista del chat del padre
   toggleChat() {
     this.toggleChatView.emit();
   }

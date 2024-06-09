@@ -13,6 +13,7 @@ export class ChatInputComponent {
   @Output() sendPrompt = new EventEmitter<string>();
   newPrompt: string = '';
 
+  // NOTE: Coger la consulta escrita por el usuario y mandarla al padre
   send() {
     if (this.newPrompt.trim()) {
       this.sendPrompt.emit(this.newPrompt);
