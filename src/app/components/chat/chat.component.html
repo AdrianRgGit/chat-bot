@@ -31,7 +31,7 @@
   <app-chat-body
     [chatEntries]="chatEntries"
     [slides]="slides"
-    class="flex-1 lg:max-h-[75%] xl:max-h-[80%]"
+    class="flex-1 overflow-y-auto"
   ></app-chat-body>
 
   <div *ngIf="chatEntries.length === 0 && slides.length === 0">
